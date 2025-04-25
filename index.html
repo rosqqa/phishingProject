@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вхід до банкінгу</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Вхід до інтернет-банкінгу</h2>
+      <form id="login-form">
+        <label for="bank">Оберіть банк</label>
+        <select id="bank">
+          <option value="ПриватБанк">ПриватБанк</option>
+          <option value="Монобанк">Монобанк</option>
+          <option value="Ощадбанк">Ощадбанк</option>
+          <option value="Райффайзен Банк">Райффайзен Банк</option>
+        </select>
+
+        <label for="card-number">Номер картки</label>
+        <input
+          type="text"
+          id="card-number"
+          placeholder="0000 0000 0000 0000"
+          maxlength="19"
+          required
+        />
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="********" required />
+
+        <button type="submit">Увійти</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

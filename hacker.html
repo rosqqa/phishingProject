@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель хакера</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="hacker-container">
+      <h2>Вкрадені дані</h2>
+      <pre id="stolen-data">Завантаження...</pre>
+    </div>
+    <script>
+      function loadStolenData() {
+        fetch("stolen_data.txt")
+          .then((response) => response.text())
+          .then(
+            (data) =>
+              (document.getElementById("stolen-data").textContent = data)
+          )
+      }
+      setInterval(loadStolenData, 3000) // Оновлювати кожні 3 секунди
+    </script>
+  </body>
+</html>
